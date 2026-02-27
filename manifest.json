@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "route-cp",
+  "version": "1.0",
+  "description": "Copy route details from Google Maps to clipboard.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/maps/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
